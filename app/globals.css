@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ffeef8 0%, #ffe6f0 50%, #fff5f9 100%);
+  min-height: 100vh;
+  color: #2c1810;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.book-cover {
+  background: linear-gradient(135deg, #ff9ed8 0%, #ff6eb4 50%, #ff4da6 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+  box-shadow: 0 20px 60px rgba(255, 110, 180, 0.4);
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-cover::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.book-cover-content {
+  position: relative;
+  z-index: 1;
+}
+
+.book-cover h1 {
+  font-size: 3.5em;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  line-height: 1.2;
+}
+
+.book-cover .subtitle {
+  font-size: 1.5em;
+  font-weight: 500;
+  opacity: 0.95;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.book-cover .tagline {
+  font-size: 1.2em;
+  opacity: 0.9;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.decorative-hearts {
+  font-size: 3em;
+  margin: 20px 0;
+  opacity: 0.9;
+}
+
+.section {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+  color: #ff4da6;
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  font-weight: 700;
+  border-bottom: 3px solid #ff9ed8;
+  padding-bottom: 15px;
+}
+
+.section h3 {
+  color: #ff6eb4;
+  font-size: 1.6em;
+  margin: 25px 0 15px 0;
+  font-weight: 600;
+}
+
+.section h4 {
+  color: #ff4da6;
+  font-size: 1.3em;
+  margin: 20px 0 10px 0;
+  font-weight: 600;
+}
+
+.section p,
+.section li {
+  line-height: 1.8;
+  margin-bottom: 12px;
+  font-size: 1.1em;
+  color: #3d2817;
+}
+
+.section ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.section li {
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.card {
+  background: linear-gradient(135deg, #fff5f9 0%, #ffe6f0 100%);
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid #ffc9e3;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h4 {
+  color: #ff4da6;
+  margin-bottom: 12px;
+  font-size: 1.3em;
+}
+
+.button-container {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #ff6eb4 0%, #ff4da6 100%);
+  color: white;
+  border: none;
+  padding: 20px 50px;
+  font-size: 1.4em;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(255, 77, 166, 0.4);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255, 77, 166, 0.5);
+}
+
+.download-btn:active {
+  transform: translateY(-1px);
+}
+
+.download-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.quote-box {
+  background: linear-gradient(135deg, #fff5f9 0%, #ffe6f0 100%);
+  border-left: 5px solid #ff6eb4;
+  padding: 25px 30px;
+  margin: 25px 0;
+  border-radius: 10px;
+  font-style: italic;
+  font-size: 1.2em;
+  color: #5d3a2a;
+}
+
+.prompt-example {
+  background: #f9f9f9;
+  border-left: 4px solid #ff9ed8;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  font-family: 'Georgia', serif;
+  color: #4d3a2a;
+}
+
+.affirmation {
+  background: linear-gradient(135deg, #ffebf5 0%, #ffd9ed 100%);
+  padding: 18px 25px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: 2px solid #ffc9e3;
+  font-weight: 500;
+  color: #5d3a2a;
+}
+
+strong {
+  color: #ff4da6;
+  font-weight: 600;
+}
+
+.emoji {
+  font-size: 1.3em;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .book-cover h1 {
+    font-size: 2.2em;
+  }
+
+  .book-cover .subtitle {
+    font-size: 1.2em;
+  }
+
+  .section {
+    padding: 25px;
+  }
+
+  .section h2 {
+    font-size: 1.8em;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
